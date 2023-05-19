@@ -1,0 +1,15 @@
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/bin/Debug/net6.0/GreetingConsole
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/bin/Debug/net6.0/GreetingConsole.deps.json
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/bin/Debug/net6.0/GreetingConsole.runtimeconfig.json
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/bin/Debug/net6.0/GreetingConsole.dll
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/bin/Debug/net6.0/GreetingConsole.pdb
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.csproj.AssemblyReference.cache
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.AssemblyInfoInputs.cache
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.AssemblyInfo.cs
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.csproj.CoreCompileInputs.cache
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.dll
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/refint/GreetingConsole.dll
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.pdb
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/GreetingConsole.genruntimeconfig.cache
+/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/Debug/net6.0/ref/GreetingConsole.dll
