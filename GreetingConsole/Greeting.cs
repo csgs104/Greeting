@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.Xml.Linq;
 
 
 namespace GreetingConsole;
@@ -10,10 +9,12 @@ public class Greeting
     public Greeting()
     { }
 
+
     public string Greet1(string name)
     {
         return $"Hello, {name}.";
     }
+
 
     public string Greet2(string? name = default)
     {
@@ -21,6 +22,7 @@ public class Greeting
             ? $"Hello, my friend."
             : $"Hello, {name}.";
     }
+
 
     public string Greet3(string? name = default)
     {
@@ -30,6 +32,7 @@ public class Greeting
                 ? $"HELLO {name}!"
                 : $"Hello, {name}.";
     }
+
 
     public string Greet4(params string[]? names)
     {
@@ -41,6 +44,7 @@ public class Greeting
                     ? $"HELLO {names[0]}!"
                     : $"Hello, {names[0]}.";
     }
+
 
     public string Greet5(params string[]? names)
     {
@@ -55,50 +59,61 @@ public class Greeting
                         : $"Hello, {names[0]}.";
     }
 
+
     public string Greet6(params string[]? names)
     {
         var greeting = new StringBuilder();
-
-        var except = new string[] { string.Empty };
-        var normal = GreetNormal(names?.Select(n => n != n.ToUpper() ? n : string.Empty).Except(except).ToArray());
-        var shout = GreetShout(names?.Select(n => n == n.ToUpper() ? n : string.Empty).Except(except).ToArray());
-
-        if (names is null) greeting.Append($"Hello, my friend.");
-        if (normal != string.Empty) greeting.Append(normal);
-        if (normal != string.Empty && shout != string.Empty) greeting.Append(" AND ");
-        if (shout != string.Empty) greeting.Append(shout);
-
+        if (names is null)
+        {
+            greeting.Append($"Hello, my friend.");
+        }
+        else
+        {
+            var normal = GreetNormal(names?.Select(n => n != n.ToUpper() ? n : string.Empty).Except(new string[] { string.Empty }).ToArray());
+            var shout = GreetShout(names?.Select(n => n == n.ToUpper() ? n : string.Empty).Except(new string[] { string.Empty }).ToArray());
+            if (normal != string.Empty) greeting.Append(normal);
+            if (normal != string.Empty && shout != string.Empty) greeting.Append(" AND ");
+            if (shout != string.Empty) greeting.Append(shout);
+        }
         return greeting.ToString();
     }
+
 
     public string Greet7(params string[]? names)
     {
         var greeting = new StringBuilder();
-
-        var list = names?.Aggregate((p, s) => $"{p}, {s}").Split(',', StringSplitOptions.TrimEntries);
-        var normal = GreetNormal(list?.Select(n => n != n.ToUpper() ? n : string.Empty).Except(new string[] { string.Empty }).ToArray());
-        var shout = GreetShout(list?.Select(n => n == n.ToUpper() ? n : string.Empty).Except(new string[] { string.Empty }).ToArray());
-
-        if (list is null) greeting.Append($"Hello, my friend.");
-        if (normal != string.Empty) greeting.Append(normal);
-        if (normal != string.Empty && shout != string.Empty) greeting.Append(" AND ");
-        if (shout != string.Empty) greeting.Append(shout);
-
+        if (names is null) 
+	    { 
+	        greeting.Append($"Hello, my friend.");
+	    }
+        else
+        {
+            var list = names?.Aggregate((p, s) => $"{p}, {s}").Split(',', StringSplitOptions.TrimEntries);
+            var normal = GreetNormal(list?.Select(n => n != n.ToUpper() ? n : string.Empty).Except(new string[] { string.Empty }).ToArray());
+            var shout = GreetShout(list?.Select(n => n == n.ToUpper() ? n : string.Empty).Except(new string[] { string.Empty }).ToArray());
+            if (normal != string.Empty) greeting.Append(normal);
+            if (normal != string.Empty && shout != string.Empty) greeting.Append(" AND ");
+            if (shout != string.Empty) greeting.Append(shout);
+        }
         return greeting.ToString();
     }
+
 
     public string Greet8(params string[]? names)
     {
         var greeting = new StringBuilder();
-
-        var normal = GreetNormal(Builder(shout: false, names: names));
-        var shout = GreetShout(Builder(shout: true, names: names));
-
-        if (names is null) greeting.Append($"Hello, my friend.");
-        if (normal is not null && normal != string.Empty) greeting.Append(normal);
-        if (normal is not null && normal != string.Empty && shout is not null && shout != string.Empty) greeting.Append(" AND ");
-        if (shout is not null && shout != string.Empty) greeting.Append(shout);
-
+        if (names is null) 
+	    {
+	        greeting.Append($"Hello, my friend."); 
+	    }
+        else
+        {
+            var normal = GreetNormal(Builder(shout: false, names: names));
+            var shout = GreetShout(Builder(shout: true, names: names));
+            if (normal != string.Empty) greeting.Append(normal);
+            if (normal != string.Empty && shout != string.Empty) greeting.Append(" AND ");
+            if (shout != string.Empty) greeting.Append(shout);
+        }
         return greeting.ToString();
     }
 
@@ -106,12 +121,12 @@ public class Greeting
     {
         var namesDic = names?.ToDictionary(n => n, n =>
                                         (isShout: n == n.ToUpper(),
-                                         isMore: n.Contains(specialsep),
+                                         isComma: n.Contains(sep),
                                          isSpecial: n != n.TrimStart(specialsep) && n != n.TrimEnd(specialsep) && n != n.Trim(specialsep)));
 
         return namesDic?.Select(n => shout == n.Value.isShout ? n.Value.isSpecial
                                                        ? n.Key.Trim(specialsep)
-                                                       : n.Value.isMore
+                                                       : n.Value.isComma
                                                        ? n.Key.Split(sep, StringSplitOptions.TrimEntries).Aggregate((p, s) => $"{p}{Environment.NewLine}{s}")
                                                        : n.Key
                                                        : string.Empty)
@@ -123,9 +138,7 @@ public class Greeting
 
     private string GreetNormal(params string[]? names)
     {
-        return names is null
-            ? string.Empty
-            : (names.Length == 0)
+        return names is null || names.Length == 0
             ? string.Empty
             : (names.Length == 1)
             ? $"Hello, {names[0]}."
@@ -138,9 +151,7 @@ public class Greeting
 
     private string GreetShout(params string[]? names)
     {
-        return names is null
-            ? string.Empty
-            : (names.Length == 0)
+        return names is null || names.Length == 0
             ? string.Empty
             : (names.Length == 1)
             ? $"HELLO {names[0]}!"

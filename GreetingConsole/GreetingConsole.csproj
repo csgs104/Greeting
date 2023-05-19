@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Greeters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Greeters\" />
+  </ItemGroup>
 </Project>

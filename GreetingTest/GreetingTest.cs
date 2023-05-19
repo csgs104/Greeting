@@ -108,7 +108,9 @@ public class GreetingTest
         Assert.Equal("Hello, Amy and Charlotte. AND HELLO BRIAN!", _sut.Greet8("Amy", "BRIAN", "Charlotte"));
         Assert.Equal("Hello, Amy, Jill, and Charlotte. AND HELLO BRIAN!", _sut.Greet8("Amy", "Jill", "BRIAN", "Charlotte"));
         Assert.Equal("Hello, Amy, Jill, Jim, and Charlotte. AND HELLO BRIAN!", _sut.Greet8("Amy", "Jill, Jim", "BRIAN", "Charlotte"));
-        Assert.Equal("Hello, Amy, Jill, Jim, and Charlotte, Michael. AND HELLO BRIAN!", _sut.Greet8("Amy", "Jill, Jim", "BRIAN", "\"Charlotte, Michael\""));
+        Assert.Equal("Hello, Amy, Jill, Jim, and Charlotte, Michael, Lucas. AND HELLO BRIAN!", _sut.Greet8("Amy", "Jill, Jim", "BRIAN", "\"Charlotte, Michael, Lucas\""));
+        Assert.Equal("Hello, Amy, Charlotte, Michael, Lucas, Jill, and Jim. AND HELLO BRIAN!", _sut.Greet8("Amy", "\"Charlotte, Michael, Lucas\"", "Jill, Jim", "BRIAN"));
+        Assert.Equal("Hello, Amy, Jill, Jim, Charlotte, Michael, Lucas.", _sut.Greet8("\"Amy, Jill, Jim, Charlotte, Michael, Lucas\""));
     }
 
     [Fact]
