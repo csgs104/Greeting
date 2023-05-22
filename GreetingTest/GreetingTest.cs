@@ -23,20 +23,23 @@ public class GreetingTest
         Assert.True(true);
     }
 
+
     [Theory] // called 3 times
     [InlineData(2)]
     [InlineData(4)]
     [InlineData(6)]
-    public void TestTheory(int number) 
+    public void TestTheory1(int number) 
     {
         Assert.False(number % 2 == 1);
     }
+
 
     [Fact]
     public void Should_Greet1()
     {
         Assert.Equal("Hello, Bob.", _sut.Greet1("Bob"));
     }
+
 
     [Fact]
     public void Should_Greet2()
@@ -45,6 +48,7 @@ public class GreetingTest
         Assert.Equal("Hello, my friend.", _sut.Greet2(null));
     }
 
+
     [Fact]
     public void Should_Greet3()
     {
@@ -52,6 +56,7 @@ public class GreetingTest
         Assert.Equal("Hello, my friend.", _sut.Greet3(null));
         Assert.Equal("HELLO JERRY!", _sut.Greet3("JERRY"));
     }
+
 
     [Fact]
     public void Should_Greet4()
@@ -62,6 +67,7 @@ public class GreetingTest
         Assert.Equal("Hello, Jill and Jane!", _sut.Greet4("Jill", "Jane"));
     }
 
+
     [Fact]
     public void Should_Greet5()
     {
@@ -71,6 +77,7 @@ public class GreetingTest
         Assert.Equal("Hello, Jill and Jane.", _sut.Greet5("Jill", "Jane"));
         Assert.Equal("Hello, Amy, Brian, and Charlotte.", _sut.Greet5("Amy", "Brian", "Charlotte"));
     }
+
 
     [Fact]
     public void Should_Greet6()
@@ -84,6 +91,7 @@ public class GreetingTest
         Assert.Equal("Hello, Amy, Jill, and Charlotte. AND HELLO BRIAN!", _sut.Greet6("Amy", "Jill", "BRIAN", "Charlotte"));
     }
 
+
     [Fact]
     public void Should_Greet7()
     {
@@ -96,6 +104,7 @@ public class GreetingTest
         Assert.Equal("Hello, Amy, Jill, and Charlotte. AND HELLO BRIAN!", _sut.Greet7("Amy", "Jill", "BRIAN", "Charlotte"));
         Assert.Equal("Hello, Amy, Jill, Jim, and Charlotte. AND HELLO BRIAN!", _sut.Greet7("Amy", "Jill, Jim", "BRIAN", "Charlotte"));
     }
+
 
     [Fact]
     public void Should_Greet8()
@@ -113,6 +122,7 @@ public class GreetingTest
         Assert.Equal("Hello, Amy, Jill, Jim, Charlotte, Michael, Lucas.", _sut.Greet8("\"Amy, Jill, Jim, Charlotte, Michael, Lucas\""));
     }
 
+
     [Fact]
     public void Should_Greet()
     {
@@ -127,6 +137,7 @@ public class GreetingTest
         Assert.Equal("Hello, Bob, Charlie, and Dianne.", _sut.Greet("Bob", "Charlie, Dianne"));
         Assert.Equal("Hello, Bob and Charlie, Dianne.", _sut.Greet("Bob", "\"Charlie, Dianne\""));
     }
+
 
     [Fact(Skip = "Sandbox")]
     public void SandBox() 

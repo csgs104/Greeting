@@ -8,9 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Greeters\" />
+    <None Remove="IoC\" />
+    <None Remove="TheGreeters\Classes\" />
+    <None Remove="TheGreeters\Abstract\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Greeters\" />
+    <Folder Include="IoC\" />
+    <Folder Include="TheGreeters\Classes\" />
+    <Folder Include="TheGreeters\Abstract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
   </ItemGroup>
 </Project>

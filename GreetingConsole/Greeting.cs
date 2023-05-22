@@ -117,6 +117,7 @@ public class Greeting
         return greeting.ToString();
     }
 
+
     private string[]? Builder(bool shout, char sep = ',', char specialsep = '"', params string[]? names)
     {
         var namesDic = names?.ToDictionary(n => n, n =>
@@ -161,6 +162,7 @@ public class Greeting
             ? $"HELLO {names.Take(names.Length - 1).Aggregate((p, s) => $"{p} AND {s}")} AND {names[names.Length - 1]}!"
             : string.Empty;
     }
+
 
     public string Greet(params string[]? namesList)
     {

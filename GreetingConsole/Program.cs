@@ -25,11 +25,33 @@
  * For example, when name is ["Jill", "Jane"], then the method should return 
  * the string "Hello, Jill and Jane."
  *
- *
- *
- *
- *
- *
  */
 
-Console.WriteLine("Hello, World!");
+using Microsoft.Extensions.DependencyInjection;
+
+using GreetingConsole;
+using GreetingConsole.IoC;
+using GreetingConsole.TheGreeters;
+
+Console.WriteLine("Hello.");
+
+Console.WriteLine("#### #### #### #### #### #### #### ####");
+
+var start = Startup.CreateHostBuilder()
+            ?? throw new Exception("Not Started.");
+var host = start.Build()
+           ?? throw new Exception("Host Not Found.");
+var greeting = host.Services.GetService<Greeting>()
+         ?? throw new Exception("Greeting not Found.");
+
+Console.WriteLine("Services Started.");
+
+Console.WriteLine("#### #### #### #### #### #### #### ####");
+
+Console.WriteLine(greeting.Greet8("Stefano", "PIPPO", "\"Pluto, Pippa, Peppa\"", "Gigia, Gigio", "PIPPOLINO"));
+Console.WriteLine(GreeterFactory.Build("Stefano", "PIPPO", "\"Pluto, Pippa, Peppa\"", "Gigia, Gigio", "PIPPOLINO"));
+
+
+Console.WriteLine("#### #### #### #### #### #### #### ####");
+
+Console.WriteLine("Bye.");

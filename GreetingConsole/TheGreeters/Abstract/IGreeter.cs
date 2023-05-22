@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace GreetingConsole;
+namespace GreetingConsole.TheGreeters.Abstract;
 
 public interface IGreeter
 {

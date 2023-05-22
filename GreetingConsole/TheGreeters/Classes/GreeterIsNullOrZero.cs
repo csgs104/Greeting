@@ -1,7 +1,9 @@
 ﻿using System;
 
+using GreetingConsole.TheGreeters.Abstract;
 
-namespace GreetingConsole.Greeters;
+// 0
+namespace GreetingConsole.TheGreeters.Classes;
 
 public class GreeterIsNullOrZero : GreeterBase
 {

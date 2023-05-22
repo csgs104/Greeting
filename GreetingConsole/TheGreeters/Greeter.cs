@@ -1,7 +1,9 @@
 ﻿using System;
 
+using GreetingConsole.TheGreeters.Abstract;
 
-namespace GreetingConsole;
+
+namespace GreetingConsole.TheGreeters;
 
 public abstract class Greeter : IGreeter
 {

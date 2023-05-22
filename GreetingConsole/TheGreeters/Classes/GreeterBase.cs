@@ -1,7 +1,10 @@
 ﻿using System;
 
+using GreetingConsole.TheGreeters;
+using GreetingConsole.TheGreeters.Abstract;
 
-namespace GreetingConsole;
+// 000
+namespace GreetingConsole.TheGreeters.Classes;
 
 public class GreeterBase : Greeter
 {
@@ -34,19 +37,4 @@ public class GreeterBase : Greeter
             return string.Empty;
         }
     }
-
-
-    // protected abstract bool IsNullOrZero(string str);
-
-    // protected abstract bool IsOne(string str);
-
-    // protected abstract bool IsTwo(string str);
-
-    // protected abstract bool IsMore(string str);
-
-    // protected abstract bool IsComma(string str);
-
-    // protected abstract bool IsShout(string str);
-
-    // protected abstract bool IsSpecial(string str);
 }
