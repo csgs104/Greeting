@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/stefanocasagrande/Desktop/Greeting/GreetingTest/GreetingTest.csproj": {}
+    "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingTest/GreetingTest.csproj": {}
   },
   "projects": {
-    "/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/GreetingConsole.csproj": {
+    "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingConsole/GreetingConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/GreetingConsole.csproj",
+        "projectUniqueName": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingConsole/GreetingConsole.csproj",
         "projectName": "GreetingConsole",
-        "projectPath": "/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/GreetingConsole.csproj",
+        "projectPath": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingConsole/GreetingConsole.csproj",
         "packagesPath": "/Users/stefanocasagrande/.nuget/packages/",
-        "outputPath": "/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/obj/",
+        "outputPath": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingConsole/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/stefanocasagrande/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,18 +60,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/stefanocasagrande/Desktop/Greeting/GreetingTest/GreetingTest.csproj": {
+    "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingTest/GreetingTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/stefanocasagrande/Desktop/Greeting/GreetingTest/GreetingTest.csproj",
+        "projectUniqueName": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingTest/GreetingTest.csproj",
         "projectName": "GreetingTest",
-        "projectPath": "/Users/stefanocasagrande/Desktop/Greeting/GreetingTest/GreetingTest.csproj",
+        "projectPath": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingTest/GreetingTest.csproj",
         "packagesPath": "/Users/stefanocasagrande/.nuget/packages/",
-        "outputPath": "/Users/stefanocasagrande/Desktop/Greeting/GreetingTest/obj/",
+        "outputPath": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/stefanocasagrande/.nuget/NuGet/NuGet.Config"
@@ -81,8 +87,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/GreetingConsole.csproj": {
-                "projectPath": "/Users/stefanocasagrande/Desktop/Greeting/GreetingConsole/GreetingConsole.csproj"
+              "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingConsole/GreetingConsole.csproj": {
+                "projectPath": "/Users/stefanocasagrande/Desktop/Projects/Greeting/GreetingConsole/GreetingConsole.csproj"
               }
             }
           }
@@ -99,23 +105,23 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.1.0, )"
+              "version": "[17.6.2, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[6.0.0, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.2, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.3, )"
+              "version": "[2.4.5, )"
             }
           },
           "imports": [
@@ -134,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     }

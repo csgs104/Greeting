@@ -42,7 +42,7 @@ var start = Startup.CreateHostBuilder()
 var host = start.Build()
            ?? throw new Exception("Host Not Found.");
 var greeting = host.Services.GetService<Greeting>()
-         ?? throw new Exception("Greeting not Found.");
+               ?? throw new Exception("Greeting not Found.");
 
 Console.WriteLine("Services Started.");
 
