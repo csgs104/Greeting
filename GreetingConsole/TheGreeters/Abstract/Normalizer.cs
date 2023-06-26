@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GreetingConsole.TheGreeters.Abstract;
+﻿namespace GreetingConsole.TheGreeters.Abstract;
 
 public static class Normalizer
 {
@@ -22,7 +20,6 @@ public static class Normalizer
                         .Except(new string[] { string.Empty })
                         .ToArray();
     }
-
 
     public static (string[]?, string[]?) Naming(params string[]? names)
     {

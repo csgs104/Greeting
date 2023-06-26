@@ -1,12 +1,7 @@
-﻿using System;
-using Microsoft.Extensions.Configuration;
+﻿namespace GreetingConsole.IoC;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
-using GreetingConsole;
-
-
-namespace GreetingConsole.IoC;
 
 public static class Startup
 {

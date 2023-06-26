@@ -1,20 +1,17 @@
-﻿using System;
+﻿namespace GreetingConsole;
+
+using System;
 using System.Text;
-
-
-namespace GreetingConsole;
 
 public class Greeting
 {
     public Greeting()
     { }
 
-
     public string Greet1(string name)
     {
         return $"Hello, {name}.";
     }
-
 
     public string Greet2(string? name = default)
     {
@@ -22,7 +19,6 @@ public class Greeting
             ? $"Hello, my friend."
             : $"Hello, {name}.";
     }
-
 
     public string Greet3(string? name = default)
     {
@@ -32,7 +28,6 @@ public class Greeting
                 ? $"HELLO {name}!"
                 : $"Hello, {name}.";
     }
-
 
     public string Greet4(params string[]? names)
     {
@@ -44,7 +39,6 @@ public class Greeting
                     ? $"HELLO {names[0]}!"
                     : $"Hello, {names[0]}.";
     }
-
 
     public string Greet5(params string[]? names)
     {
@@ -58,7 +52,6 @@ public class Greeting
                         ? $"HELLO {names[0]}!"
                         : $"Hello, {names[0]}.";
     }
-
 
     public string Greet6(params string[]? names)
     {
@@ -77,7 +70,6 @@ public class Greeting
         }
         return greeting.ToString();
     }
-
 
     public string Greet7(params string[]? names)
     {
@@ -98,7 +90,6 @@ public class Greeting
         return greeting.ToString();
     }
 
-
     public string Greet8(params string[]? names)
     {
         var greeting = new StringBuilder();
@@ -116,7 +107,6 @@ public class Greeting
         }
         return greeting.ToString();
     }
-
 
     private string[]? Builder(bool shout, char sep = ',', char specialsep = '"', params string[]? names)
     {
@@ -163,7 +153,6 @@ public class Greeting
             : string.Empty;
     }
 
-
     public string Greet(params string[]? namesList)
     {
         var str = new StringBuilder();
@@ -176,7 +165,6 @@ public class Greeting
             var names = new List<string>();
             var greeted = new List<string>();
             var shouted = new List<string>();
-
             foreach (var nameList in namesList)
             {
                 if (nameList is null)

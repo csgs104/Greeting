@@ -1,10 +1,8 @@
-﻿using System;
+﻿namespace GreetingConsole.TheGreeters.Classes;
 
-using GreetingConsole.TheGreeters.Abstract;
+using Abstract;
 
 // 2
-namespace GreetingConsole.TheGreeters.Classes;
-
 public class GreeterIsTwo : GreeterBase
 {
     public GreeterIsTwo(IGreeter? successor = default)

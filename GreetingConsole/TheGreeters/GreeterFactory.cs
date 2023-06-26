@@ -1,13 +1,9 @@
-﻿using System;
+﻿namespace GreetingConsole.TheGreeters;
+
 using System.Text;
-
 using GreetingConsole.TheGreeters.Abstract;
-using GreetingConsole.TheGreeters.Classes;
 
-
-namespace GreetingConsole.TheGreeters;
-
-public  static class GreeterFactory
+public static class GreeterFactory
 {
     public static string Build(params string[]? strs) 
     {

@@ -1,10 +1,8 @@
-﻿using System;
+﻿namespace GreetingConsole.TheGreeters.Classes;
 
-using GreetingConsole.TheGreeters.Abstract;
+using Abstract;
 
 // 1
-namespace GreetingConsole.TheGreeters.Classes;
-
 public class GreeterIsOne : GreeterBase
 {
     public GreeterIsOne(IGreeter? successor = default)

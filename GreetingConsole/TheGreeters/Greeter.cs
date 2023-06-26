@@ -1,7 +1,4 @@
-﻿using System;
-
-using GreetingConsole.TheGreeters.Abstract;
-
+﻿using GreetingConsole.TheGreeters.Abstract;
 
 namespace GreetingConsole.TheGreeters;
 
@@ -11,18 +8,15 @@ public abstract class Greeter : IGreeter
 
     protected IGreeter? Successor { get => _successor; }
 
-
     public Greeter(IGreeter? successor = default)
     {
         _successor = successor;
     }
 
-
     public void SetSuccessor(IGreeter? successor)
     {
         _successor = successor;
     }
-
 
     public abstract string Greet(params string[]? strs);
 }

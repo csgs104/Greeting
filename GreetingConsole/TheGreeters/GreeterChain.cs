@@ -1,11 +1,9 @@
-﻿using System;
+﻿namespace GreetingConsole.TheGreeters;
 
-using GreetingConsole.TheGreeters.Abstract;
-using GreetingConsole.TheGreeters.Classes;
+using Abstract;
+using Classes;
 
 // 3
-namespace GreetingConsole.TheGreeters;
-
 public class GreeterChain
 {
     private readonly IGreeter _chain;
